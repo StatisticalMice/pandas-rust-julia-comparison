@@ -1,7 +1,7 @@
 using DataFrames, CSV, BenchmarkTools
 
 function task_one()
-    println("Read 25xtrain.csv as a DataFrame and print its size.")
+    println("Read 25xtrain.csv as a DataFrame and print its size.") # I left this here intentionally to show how many times it's executed.
     df = DataFrame(CSV.File("25xtrain.csv"))
     size(df)
 end
@@ -16,3 +16,4 @@ function task_two(df)
 end
 println("Show the first five rows.")
 @btime task_two(df)
+print(task_two(df))
